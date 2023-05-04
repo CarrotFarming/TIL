@@ -5,9 +5,12 @@ int main(){
     int h, m;
     cin >> h >> m;
     
-    if(m >= 45) cout << h << ' ' << m-45;
-    else if(h == 0) cout << 23 << ' ' << 15+m;
-    else cout << h-1 << ' ' << 15+m;
+    if(m >= 45) m -= 45;
+    else{
+        m += 15;
+        if(--h<0) h = 23;
+    }
     
+    cout << h << ' ' << m;
     return 0;
 }
