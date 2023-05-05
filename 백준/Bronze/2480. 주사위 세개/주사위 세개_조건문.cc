@@ -26,5 +26,6 @@ int main(){
         else tmp = b;
         cout << 1000 + tmp*100;
     }
+    
     return 0;
 }
