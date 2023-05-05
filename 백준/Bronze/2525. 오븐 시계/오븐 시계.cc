@@ -2,27 +2,20 @@
 using namespace std;
 
 int main(){
-    int h, m, time;
-    int addH, addM;
-    cin >> h >> m >> time;
-    addH = 0;
+  int h, m, time;
+  cin >> h >> m >> time;
+
+  if(m+time > 59){
+    h += (m+time)/60;
+    
+    if(((m+time)%60) == 0) m = 0;
+    else m = (m+time)%60;
+    
+  } else m += time;
+
+  if(h>23) h -= 24;
   
-    while(time>59){
-        time -= 60;
-        addH++;
-    }
-    addM = time;
     
-    if(m+addM > 59){
-        m = m+addM-60;
-        addH++;
-    }else m += addM;
-    
-    if(addH!=0){
-        h += addH;
-        if(h>23) h -= 24;
-    }
-    
-    cout << h << ' ' << m;
-    return 0;
+  cout << h << ' ' << m;
+  return 0;
 }
