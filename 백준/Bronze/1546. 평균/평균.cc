@@ -2,9 +2,6 @@
 using namespace std;
 
 int main(){
-    cout.precision(10); // 자릿수 지정
-    cout << fixed; // 고점 소수점 표기로 변경
-
     int n;
     int max = 0;
     double sum = 0;
