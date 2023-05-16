@@ -5,7 +5,7 @@ int main(){
     string s;
     cin >> s;
 
-    for(char i=97; i<123; i++){
+    for(int i=97; i<123; i++){
         cout << (int) s.find(i) << ' ';
     }
 
