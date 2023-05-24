@@ -4,8 +4,7 @@ using namespace std;
 
 int count(string str){
     string alphabet[8] = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
-    int idx = 0;
-    
+
     for(int i=0; i<8; i++){
         while(1){
             if(str.find(alphabet[i]) != -1){
