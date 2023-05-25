@@ -29,9 +29,6 @@ int main(){
             sum += credit * gradeTable[grade];
         }
     }
-    
-    cout.precision(6);
-    cout.fixed;
     cout << sum/creditSum;
     
     return 0;
