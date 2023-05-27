@@ -7,7 +7,7 @@ int main(){
     string matrix[5][15];
     for(int i=0; i<5; i++){
         string s;
-        getline(cin, s);
+        cin >> s;
         for(int j=0; j<15; j++){
             if(j < s.length()) matrix[i][j] = s[j];
             else matrix[i][j] = " ";
