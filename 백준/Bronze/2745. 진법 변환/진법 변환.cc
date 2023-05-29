@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
+    ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
 
     int b, tmp;
     int res = 0;
