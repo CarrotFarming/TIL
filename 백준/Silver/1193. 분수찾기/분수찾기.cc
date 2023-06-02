@@ -9,7 +9,7 @@ int main(){
     cin >> x;
 
     // X가 위치한 대각선 찾기
-    while(x > line){
+    while(x - line > 0){
         x -= line;
         line++;
     }
