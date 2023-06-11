@@ -1,13 +1,13 @@
 /* DATE: 2023.05.17
    NO: 1152
-   TITLE: ´Ü¾îÀÇ °³¼ö */
+   TITLE: ë‹¨ì–´ì˜ ê°œìˆ˜ */
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    ios_base::sync_with_stdio(false);	// µÎ Ç¥ÁØ ÀÔÃâ·Â µ¿±âÈ­ ÇØÁ¦
-	cin.tie(NULL);	// ÀÔ·Â°ú Ãâ·Â ¹­À½À» Ç®±â
+    ios_base::sync_with_stdio(false);	// ë‘ í‘œì¤€ ì…ì¶œë ¥ ë™ê¸°í™” í•´ì œ
+	cin.tie(NULL);	// ì…ë ¥ê³¼ ì¶œë ¥ ë¬¶ìŒì„ í’€ê¸°
     
     int cnt = 1;
 	string str;
