@@ -1,12 +1,12 @@
 /* DATE: 2023.05.29
    NO: 2745
-   TITLE: Áø¹ı º¯È¯ */
+   TITLE: ì§„ë²• ë³€í™˜ */
 
 #include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false); // µÎ Ç¥ÁØ ÀÔÃâ·Â µ¿±âÈ­ ÇØÁ¦
+    ios_base::sync_with_stdio(false); // ë‘ í‘œì¤€ ì…ì¶œë ¥ ë™ê¸°í™” í•´ì œ
 
     int b;
     int res = 0;
