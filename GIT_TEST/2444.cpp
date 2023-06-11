@@ -1,12 +1,12 @@
 /* DATE: 2023.05.21
    NO: 2444
-   TITLE: ∫∞ ¬Ô±‚-7 */
+   TITLE: Î≥Ñ Ï∞çÍ∏∞-7 */
 
 #include <iostream>
 using namespace std;
 
 int main(){
-    ios_base::sync_with_stdio(false);	// µŒ «•¡ÿ ¿‘√‚∑¬ µø±‚»≠ «ÿ¡¶
+    ios_base::sync_with_stdio(false);	// Îëê ÌëúÏ§Ä ÏûÖÏ∂úÎ†• ÎèôÍ∏∞Ìôî Ìï¥Ï†ú
     
     int n;
     cin >> n;
