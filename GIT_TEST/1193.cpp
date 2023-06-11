@@ -1,26 +1,26 @@
 /* DATE: 2023.06.02
    NO: 1193
-   TITLE: ºĞ¼öÃ£±â */
+   TITLE: ë¶„ìˆ˜ì°¾ê¸° */
 
 #include <iostream>
 using namespace std;
 
 int main(){
-	ios_base::sync_with_stdio(false);	// µÎ Ç¥ÁØ ÀÔÃâ·Â µ¿±âÈ­ ÇØÁ¦
+	ios_base::sync_with_stdio(false);	// ë‘ í‘œì¤€ ì…ì¶œë ¥ ë™ê¸°í™” í•´ì œ
 
     int line = 1;
     int x;
     cin >> x;
 
-    // X°¡ À§Ä¡ÇÑ ´ë°¢¼± Ã£±â
+    // Xê°€ ìœ„ì¹˜í•œ ëŒ€ê°ì„  ì°¾ê¸°
     while(x - line > 0){
         x -= line;
         line++;
     }
 
-    // ´ë°¢¼± È¦¼öÀÏ ¶§
+    // ëŒ€ê°ì„  í™€ìˆ˜ì¼ ë•Œ
     if(line % 2) cout << line + 1 - x << '/' << x;
-    // ´ë°¢¼± Â¦¼öÀÏ ¶§
+    // ëŒ€ê°ì„  ì§ìˆ˜ì¼ ë•Œ
     else cout << x << '/' << line + 1 - x;
     
     return 0;
