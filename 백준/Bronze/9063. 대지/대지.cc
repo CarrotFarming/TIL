@@ -1,25 +1,22 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int main(){
     ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
-    int n;
-    cin >> n;
-    int* x = new int[n];
-    int* y = new int[n];
-
-    for(int i=0; i<n; i++){
-        cin >> x[i] >> y[i];
-    }
-
-    sort(x, x+n);
-    sort(y, y+n);
-
-    cout << (x[n-1] - x[0])*(y[n-1] - y[0]);
-
-    delete[] x;
-    delete[] y;
     
+    int minX = 10000, minY = 10000;
+    int maxX = -10000, maxY = -10000;
+    int a, b, n;
+    cin >> n;
+
+    while(n--){
+        cin >> a >> b;
+		if(a >= maxX) maxX = a;
+		if(b >= maxY) maxY = b;
+		if(a <= minX) minX = a;
+		if(b <= minY) minY = b;
+    }
+    
+    cout << (maxX - minX)*(maxY - minY);
     return 0;
 }
