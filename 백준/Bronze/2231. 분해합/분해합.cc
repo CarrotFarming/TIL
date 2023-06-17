@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int decomposition(int n);
+int decompositionSum(int n);
 
 int main(){
-	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
-	cin.tie(NULL);	// 입력과 출력 묶음을 풀기
+    ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
+    cin.tie(NULL);	// 입력과 출력 묶음을 풀기
     
     int n;
     cin >> n;
@@ -13,7 +13,7 @@ int main(){
     bool print = 0;
 
     while(m < n){
-        if(n == decomposition(m)){
+        if(n == decompositionSum(m)){
             print = 1;
             cout << m;
             break;
@@ -23,7 +23,7 @@ int main(){
     return 0;
 }
 
-int decomposition(int n){
+int decompositionSum(int n){
     int sum = n;
     while(n > 0){
         sum += n%10;
