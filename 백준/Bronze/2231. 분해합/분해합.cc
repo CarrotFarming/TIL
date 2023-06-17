@@ -13,7 +13,7 @@ int main(){
     bool print = 0;
 
     while(m < n){
-        if(n == m + decomposition(m)){
+        if(n == decomposition(m)){
             print = 1;
             cout << m;
             break;
@@ -24,7 +24,7 @@ int main(){
 }
 
 int decomposition(int n){
-    int sum = 0;
+    int sum = n;
     while(n > 0){
         sum += n%10;
         n /= 10;
