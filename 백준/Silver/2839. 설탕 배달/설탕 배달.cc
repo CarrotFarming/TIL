@@ -1,19 +1,21 @@
 #include <iostream>
-
 using namespace std;
 
-int N;
-int main() {
-	cin >> N;
-	int ans = 0;
-	while (N>=0) {
-		if (N % 5 == 0) {	//가장 큰 수로 나누는게 가장 작은수랑 섞어서 나누는 것보다 유리
-			ans += (N / 5);	//나눈 몫을 더한 것이 정답
-			cout << ans << endl;
-			return 0;
-		}
-		N -= 3;	//3kg을 빼고 
-		ans++;	//가방 하나 늘어남
-	}
-	cout << -1 << endl;
+int main(){
+    int n;
+    cin >> n;
+    int cnt = 0;
+    bool done = 0;
+    while(n >= 0){
+        if(n%5 == 0){
+            cnt += n/5;
+            done = 1;
+            break;
+        }
+        n -= 3;
+        cnt++;
+    }
+    if(!done) cout << -1;
+    else cout << cnt;
+    return 0;
 }
