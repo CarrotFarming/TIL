@@ -1,32 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
- 
-bool compare(pair<int, int>a, pair<int, int>b) {
-    if (a.second == b.second) {
-        return a.first < b.first;
-    }
-    else {
-        return a.second < b.second;
-    }
-}
- 
+
 int main(){
-    int N,x,y;
-    vector<pair<int, int> > v;
-    scanf("%d", &N);
-    
-    for(int i=0; i<N; i++){
-        scanf("%d %d", &x,&y);
-        v.push_back(make_pair(x,y));
+	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
+	cin.tie(NULL);	// 입력과 출력 묶음을 풀기
+
+    int n, x, y;
+    cin >> n;
+    vector<pair<int, int>> dots;
+    for(int i=0; i<n; i++){
+        cin >> x >> y;
+        dots.push_back(make_pair(y, x));
     }
-    
-    sort(v.begin(),v.end(),compare);
- 
-    for(int i=0; i<N; i++)
-        printf("%d %d\n", v[i].first,v[i].second);
-        
- 
+
+    sort(dots.begin(), dots.end());
+    for(int i=0; i<n; i++){
+        cout << dots[i].second << ' ' << dots[i].first << '\n';
+    }
+    return 0;
 }
