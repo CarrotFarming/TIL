@@ -8,9 +8,7 @@ int main(){
     int n;
     cin >> n;
     cin.ignore(); // 개행 버퍼 비우기
-
     string str;
-    bool check = false;
     
     while(n--){
         getline(cin, str);
@@ -18,15 +16,9 @@ int main(){
         int score = 1;
         for(int i=0; i<str.length(); i++){
             if(str[i] == 'O') {
-                check = true;
-                if(check){
-                    scoreSum += score;
-                    score++;
-                }else scoreSum += score;
-            }else{
-                check = false;
-                score = 1;
-            }
+                scoreSum += score;
+                score++;
+            }else score = 1;
         }
         cout << scoreSum << '\n';
     }
