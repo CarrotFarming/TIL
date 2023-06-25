@@ -11,7 +11,7 @@ int main(){
         int num = 1;
         while(n > h){
             n -= h;
-            if(num <= w) num++;
+            num++;
         }
         cout << n*100 + num << '\n';
     }
