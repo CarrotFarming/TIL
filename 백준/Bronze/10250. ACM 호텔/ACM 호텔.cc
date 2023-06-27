@@ -13,7 +13,7 @@ int main(){
             n -= h;
             num++;
         }
-        cout << n*100 + num << '\n';
+        cout << n * 100 + num << '\n';
     }
     return 0;
 }
