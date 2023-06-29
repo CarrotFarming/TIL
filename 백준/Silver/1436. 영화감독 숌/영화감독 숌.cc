@@ -13,7 +13,7 @@ int main(){
     if(n == 1) cout << numbering;
     else{
         while(series < n){
-            numbering++;
+            ++numbering;
             numCheck = checkSixNum(numbering);
             if(numCheck) series++;
         }
