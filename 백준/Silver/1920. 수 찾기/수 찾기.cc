@@ -1,50 +1,41 @@
 #include <iostream>
 #include <algorithm>
-
 using namespace std;
 
-int N,M;
-int arr[100010];
-
-void binarySearch(int key){
-    int start = 0;
-    int end = N-1;
-    int mid;
-
-    while(end>=start){
-        mid =(start+end)/2;
-        if(arr[mid]==key){
-            cout<<1<<"\n";
-            return;
-        }else if(arr[mid]>key){
-            end = mid - 1;
-        }else{
-            start = mid + 1;
-        }
-    }
-    cout<<0<<"\n";
-    return;
-}
-
+int binarySearch(int len, int m, int arr[]);
 
 int main(){
-    
-    ios_base::sync_with_stdio(0);cin.tie(0);
-    cin>>N;
-    int temp;
+	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
+	cin.tie(NULL);	// 입력과 출력 묶음을 풀기
 
-    for(int i=0;i<N;i++){
-        cin>>temp;
-        arr[i]=temp;
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin >> arr[i];
     }
+    sort(arr, arr+n);
 
-    sort(arr,arr+N);
-
-    cin>>M;
-    for(int i=0;i<M;i++){
-        cin>>temp;
-        binarySearch(temp);
+    int m;
+    cin >> m;
+    for(int i=0; i<m; i++){
+        int tmp;
+        cin >> tmp;
+        cout << binarySearch(n, tmp, arr) << ' ';
     }
+    return 0;
+}
 
+int binarySearch(int len, int m, int arr[]){
+    int start = 0;
+    int last = len-1;
+    int midIdx;
+
+    while(start <= last){
+        midIdx = (start + last) / 2;
+        if(m == arr[midIdx]) return 1;
+        else if(m < arr[midIdx]) last = midIdx-1;
+        else start = midIdx+1;
+    }
     return 0;
 }
