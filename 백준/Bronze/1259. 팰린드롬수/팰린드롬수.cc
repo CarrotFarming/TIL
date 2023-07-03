@@ -1,24 +1,20 @@
 #include <iostream>
-#include <string>
-#include <algorithm> //reverse 함수가 있는 헤더파일
-
+#include <algorithm>
 using namespace std;
 
+int main(){
+	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
+	cin.tie(NULL);	// 입력과 출력 묶음을 풀기
+    
+    string num;
+    while(true){
+        cin >> num;
+        if(num == "0") break;
 
-int main() {
-	string N;
-	
-    while (N!="0") {
-        cin >> N;
-        string buf =N;
-        reverse(N.begin(), N.end()); // 앞 뒤 바꿈
-        if (N=="0") { // 즉시 탈출 (왜냐하면 0도 reverse하면 0으로 같다.)
-            break;
-        }
-        else if(N == buf) { // 비교
-            cout <<"yes\n";
-        }else {
-            cout <<"no\n";
-        }
-    }  
+        string tmp = num;
+        reverse(tmp.begin(), tmp.end());
+        if(num == tmp) cout << "yes\n";
+        else cout << "no\n";
+    }
+    return 0;
 }
