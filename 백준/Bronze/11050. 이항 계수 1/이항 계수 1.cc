@@ -3,9 +3,7 @@ using namespace std;
 
 int factorial(int n);
 
-int main(){
-	ios_base::sync_with_stdio(false);	// 두 표준 입출력 동기화 해제
-    
+int main(){   
     int n, k;
     cin >> n >> k;
 
