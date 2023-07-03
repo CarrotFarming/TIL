@@ -3,7 +3,7 @@ using namespace std;
 
 int factorial(int n);
 
-int main(){   
+int main(){
     int n, k;
     cin >> n >> k;
 
