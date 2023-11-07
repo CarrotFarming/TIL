@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int turn(int n);
+bool turn(int n);
 
 int main(){
     int n;
     cin >> n;
     
-    if(turn(n) % 2 == 0) cout << "CY";
-    else cout << "SK";
+    if(turn(n)) cout << "SK";
+    else cout << "CY";
     
     return 0;
 }
 
-int turn(int n){
-    if(n!=1) return turn(n-1)+1;
+bool turn(int n){
+    if(n!=1) return !turn(n-1);
     else return 1;
 }
