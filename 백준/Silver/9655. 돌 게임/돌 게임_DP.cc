@@ -12,7 +12,7 @@ int main(){
     D[2] = 2;
     D[3] = 1;
 
-    for(int i = 4; i < n; i++){
+    for(int i = 4; i <= n; i++){
         D[i] = min(D[i-1] + 1, D[i-3] + 1);
     }
 
