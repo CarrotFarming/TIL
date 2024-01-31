@@ -1,3 +1,5 @@
+from bisect import bisect_left
+
 class Solution:
     def triangleNumber(self, nums: List[int]) -> int:
         nums.sort() # 이진탐색을 위한 정렬
@@ -9,17 +11,7 @@ class Solution:
                 continue
             for j in range(i + 1, len_nums - 1):
                 tmp = nums[i] + nums[j]
-                left, right = j + 1, len_nums - 1
-
-                # 삼각 부등식을 만족하는 변 탐색
-                while left <= right:
-                    mid = (left + right) // 2
-
-                    if tmp <= nums[mid]:
-                        right = mid - 1
-                    else:
-                        left = mid + 1
-                # j와 right 사이의 모든 값: 삼각 부등식을 만족
-                cnt += (right - j)
+                index = bisect_left(nums, tmp, j + 1)
+                cnt += (index - (j + 1))
 
         return cnt
