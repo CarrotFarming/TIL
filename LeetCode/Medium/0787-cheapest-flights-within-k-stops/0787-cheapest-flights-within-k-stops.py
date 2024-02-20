@@ -16,7 +16,7 @@ class Solution:
                 return cost
 
             # 우선순위 큐를 이용했기 때문에 어차피 cost는 최소
-            # 따라서 재방문의 경우에는 이미 저장되어 있던 경유 횟수보다 현재 루트의 경유 횟수가 더 적은 경우가 최적임
+            # 따라서 재방문의 경우, 이미 저장되어 있던 경유 횟수보다 현재 루트의 경유 횟수가 더 적은 경우가 최적임
             if node not in visit or visit[node] > stopover:
                 visit[node] = stopover
                 if stopover <= k:
