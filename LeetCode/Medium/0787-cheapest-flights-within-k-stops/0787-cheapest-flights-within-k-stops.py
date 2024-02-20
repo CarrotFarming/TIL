@@ -6,7 +6,7 @@ class Solution:
 
         q = [(0, src, 0)]
 
-        # 싸이클이 도는 그래프가 주어지기 때문에 시간초과 발생 - 방문 체크 필요
+        # 싸이클이 도는 그래프가 주어지기 때문에 시간초과 발생 -> 방문 체크 필요
         # key: 노드, value: 경유 횟수
         visit = defaultdict(int)
 
