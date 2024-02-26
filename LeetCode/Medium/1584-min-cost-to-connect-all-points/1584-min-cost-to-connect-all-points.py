@@ -2,7 +2,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         min_cost = 0
         points_cnt = len(points)
-        q = [(0, 0)]  # 우선순위 큐: (cost, point idx)
+        q = [(0, 0)]  # 우선순위 큐 (cost, point idx)
         visit = set()  # 방문 point 체크 set
         
         # prim's algorithm
