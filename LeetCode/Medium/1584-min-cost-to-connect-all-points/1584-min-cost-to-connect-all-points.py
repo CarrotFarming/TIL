@@ -8,7 +8,6 @@ class Solution:
         # prim's algorithm
         while len(visit) < points_cnt:
             cost, point_idx = heapq.heappop(q)
-            
             # 최소 비용 연결이 되어 있다면 continue
             if point_idx in visit:
                 continue
