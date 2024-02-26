@@ -18,7 +18,6 @@ class Solution:
 
             x1, y1 = points[point_idx]
             for next_idx, (x2, y2) in enumerate(points):
-                # 방문하지 않은 point에 대해서만 계산
                 if next_idx not in visit:
                     dist = abs(x1 - x2) + abs(y1 - y2)
                     heapq.heappush(q, (dist, next_idx))
